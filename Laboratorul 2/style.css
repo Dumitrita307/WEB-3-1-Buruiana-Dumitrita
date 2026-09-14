@@ -1,0 +1,834 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e8f3eb;
+    color: #24352b;
+    line-height: 1.7;
+}
+
+header {
+    background: linear-gradient(
+        135deg,
+        #dcefe1,
+        #c6e3cf
+    );
+
+    min-height: 500px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 60px 20px;
+
+    border-bottom: 1px solid #b8d3bf;
+}
+
+
+.header-content {
+    max-width: 850px;
+}
+
+
+.subtitle {
+    color: #548264;
+    letter-spacing: 5px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+header h1 {
+    color: #254d34;
+    font-size: 50px;
+    line-height: 1.15;
+    margin-bottom: 25px;
+}
+
+
+.intro {
+    max-width: 650px;
+    margin: 0 auto 30px;
+    color: #557061;
+    font-size: 18px;
+}
+
+
+.buton-principal {
+    display: inline-block;
+
+    background-color: #487b5a;
+    color: white;
+
+    text-decoration: none;
+
+    padding: 13px 28px;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+.buton-principal:hover {
+    background-color: #315f42;
+    transform: translateY(-3px);
+}
+
+nav {
+    background-color: #ffffff;
+    border-bottom: 1px solid #cfe0d3;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 100;
+}
+
+
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 14px 25px;
+}
+
+
+.logo {
+    color: #315f42;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+
+.logo span {
+    color: #79a989;
+    margin-left: 5px;
+}
+
+
+.meniu {
+    display: flex;
+    gap: 10px;
+}
+
+
+.meniu a {
+    color: #456251;
+    text-decoration: none;
+
+    padding: 8px 14px;
+
+    border-radius: 20px;
+
+    transition: 0.3s;
+
+    font-size: 14px;
+}
+
+
+.meniu a:hover {
+    background-color: #e0efe4;
+    color: #315f42;
+}
+
+.tara {
+    width: 90%;
+    max-width: 1150px;
+
+    margin: 50px auto;
+
+    padding: 45px;
+
+    background-color: white;
+
+    border-radius: 24px;
+
+    box-shadow: 0 12px 35px rgba(60, 90, 70, 0.10);
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+
+.tara::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 8px;
+    height: 100%;
+}
+
+
+.moldova::before {
+    background: linear-gradient(
+        to bottom,
+        #0046ae 33%,
+        #ffd700 33%,
+        #ffd700 66%,
+        #cc0000 66%
+    );
+}
+
+
+.norvegia::before {
+    background: linear-gradient(
+        to bottom,
+        #ba0c2f 33%,
+        white 33%,
+        white 66%,
+        #00205b 66%
+    );
+}
+
+
+.suedia::before {
+    background: linear-gradient(
+        to bottom,
+        #006aa7 50%,
+        #fecc00 50%
+    );
+}
+
+.tara-header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 35px;
+
+    border-bottom: 1px solid #e1e9e3;
+
+    padding-bottom: 25px;
+}
+
+
+.numar {
+    color: #789783;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+}
+
+
+.tara h2 {
+    font-size: 36px;
+
+    color: #294a35;
+
+    margin: 5px 0;
+}
+
+
+.slogan {
+    color: #718477;
+
+    font-size: 16px;
+}
+
+
+.badge {
+    border: 1px solid #bdd2c2;
+
+    color: #52705c;
+
+    padding: 8px 15px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+.continut-tara {
+    display: grid;
+
+    grid-template-columns: 1.5fr 1fr;
+
+    gap: 50px;
+
+    align-items: center;
+}
+
+
+.text-tara h3,
+.steag-container h3,
+.coloana-informatii h3 {
+    color: #315c3e;
+
+    margin-bottom: 15px;
+
+    font-size: 21px;
+}
+
+
+.text-tara p {
+    color: #596a5e;
+
+    margin-bottom: 15px;
+}
+
+.informatie {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 25px;
+}
+
+.informatie div {
+    background-color: #f1f7f2;
+
+    padding: 12px 15px;
+
+    border-radius: 12px;
+
+    min-width: 120px;
+}
+
+.informatie strong {
+    display: block;
+
+    font-size: 11px;
+
+    color: #769080;
+
+    text-transform: uppercase;
+}
+
+
+.informatie span {
+    color: #31583d;
+
+    font-weight: bold;
+
+    font-size: 14px;
+}
+
+.steag-container {
+    text-align: center;
+
+    padding: 25px;
+
+    border-radius: 18px;
+
+    background-color: #f8fbf8;
+}
+
+.steag {
+    border-collapse: collapse;
+
+    margin: 25px auto;
+
+    border: 5px solid white;
+
+    outline: 3px solid #304d3a;
+
+    box-shadow: 0 8px 20px rgba(30, 60, 40, 0.20);
+}
+
+.steag td {
+    width: 45px;
+    height: 30px;
+
+    padding: 0;
+}
+
+.steag-moldova td:nth-child(1),
+.steag-moldova td:nth-child(2),
+.steag-moldova td:nth-child(3) {
+    background-color: #0046ae;
+}
+
+
+.steag-moldova td:nth-child(4),
+.steag-moldova td:nth-child(5),
+.steag-moldova td:nth-child(6) {
+    background-color: #ffd700;
+}
+
+
+.steag-moldova td:nth-child(7),
+.steag-moldova td:nth-child(8),
+.steag-moldova td:nth-child(9) {
+    background-color: #cc0000;
+}
+
+.steag-norvegia {
+    width: 300px;
+    height: 170px;
+    table-layout: fixed;
+    border-collapse: collapse;
+    margin: 25px auto;
+    border: 3px solid #304d3a;
+    box-shadow: 0 8px 18px rgba(30, 60, 40, 0.18);
+}
+
+.steag-norvegia td {
+    width: 11.11%;
+    height: 10px;
+    padding: 0;
+    border: none;
+    background-color: #ba0c2f;
+}
+
+/* Banda albă orizontală */
+.steag-norvegia tr:nth-child(7) td,
+.steag-norvegia tr:nth-child(10) td {
+    background-color: white;
+}
+
+/* Benzile albe verticale */
+.steag-norvegia tr td:nth-child(3),
+.steag-norvegia tr td:nth-child(5) {
+    background-color: white;
+}
+
+/* Crucea albastră orizontală */
+.steag-norvegia tr:nth-child(8) td,
+.steag-norvegia tr:nth-child(9) td {
+    background-color: #00205b;
+}
+
+/* Crucea albastră verticală */
+.steag-norvegia tr td:nth-child(4) {
+    background-color: #00205b;
+}
+
+.steag-suedia td {
+    background-color: #006aa7;
+}
+
+
+.steag-suedia tr:nth-child(1) td:nth-child(3),
+.steag-suedia tr:nth-child(1) td:nth-child(4),
+
+.steag-suedia tr:nth-child(2) td:nth-child(3),
+.steag-suedia tr:nth-child(2) td:nth-child(4),
+
+.steag-suedia tr:nth-child(3) td,
+.steag-suedia tr:nth-child(4) td,
+
+.steag-suedia tr:nth-child(5) td:nth-child(3),
+.steag-suedia tr:nth-child(5) td:nth-child(4),
+
+.steag-suedia tr:nth-child(6) td:nth-child(3),
+.steag-suedia tr:nth-child(6) td:nth-child(4) {
+    background-color: #fecc00;
+}
+
+
+
+.coloana-informatii {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 40px;
+
+    margin-top: 35px;
+}
+
+
+ul,
+ol {
+    padding-left: 25px;
+
+    color: #53655a;
+}
+
+
+li {
+    padding: 5px 0;
+}
+
+
+dl {
+    color: #53655a;
+}
+
+
+dt {
+    color: #315c3e;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    margin-top: 12px;
+}
+
+
+dd {
+    margin-left: 20px;
+
+    font-size: 14px;
+}
+
+
+
+.stiati {
+    background-color: #edf7ef;
+
+    border: 1px solid #d3e7d7;
+
+    border-radius: 18px;
+
+    padding: 25px;
+}
+
+
+.stiati p {
+    color: #5c6e62;
+
+    font-size: 14px;
+}
+
+.linkuri {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-top: 30px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #e2e9e3;
+}
+
+
+.linkuri a {
+    color: #3f7651;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    padding: 10px 18px;
+
+    border-radius: 25px;
+
+    transition: 0.3s;
+}
+
+
+.linkuri a:first-child {
+    background-color: #e4f1e7;
+}
+
+
+.linkuri a:hover {
+    background-color: #3f7651;
+
+    color: white;
+}
+
+
+.comparatie {
+    width: 90%;
+
+    max-width: 1150px;
+
+    margin: 70px auto;
+
+    background-color: #ffffff;
+
+    border-radius: 24px;
+
+    padding: 45px;
+
+    box-shadow: 0 12px 35px rgba(60, 90, 70, 0.10);
+}
+
+
+.titlu-comparatie {
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+
+.titlu-comparatie h2 {
+    color: #294a35;
+
+    font-size: 34px;
+
+    margin: 8px 0;
+}
+
+
+.titlu-comparatie p {
+    color: #708177;
+}
+
+
+.tabel-wrapper {
+    overflow-x: auto;
+}
+
+
+.tabel-comparativ {
+    width: 100%;
+
+    border-collapse: separate;
+
+    border-spacing: 0;
+
+    overflow: hidden;
+
+    border-radius: 15px;
+
+    border: 1px solid #d9e5dc;
+}
+
+
+.tabel-comparativ th,
+.tabel-comparativ td {
+    padding: 16px;
+
+    text-align: center;
+
+    border-right: 1px solid #e0e8e2;
+
+    border-bottom: 1px solid #e0e8e2;
+}
+
+
+.tabel-comparativ th {
+    color: white;
+
+    font-size: 15px;
+}
+
+
+.tabel-comparativ th:first-child {
+    background-color: #42644d;
+}
+
+
+.cap-moldova {
+    background-color: #315f9e;
+}
+
+
+.cap-norvegia {
+    background-color: #9d2d43;
+}
+
+
+.cap-suedia {
+    background-color: #357da1;
+}
+
+
+.tabel-comparativ td:first-child {
+    text-align: left;
+
+    font-weight: bold;
+
+    color: #46604e;
+
+    background-color: #f2f7f3;
+}
+
+
+.tabel-comparativ td {
+    color: #5d6d63;
+
+    background-color: white;
+}
+
+
+.tabel-comparativ tr:hover td {
+    background-color: #edf6ef;
+}
+
+footer {
+    background-color: #294b35;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 50px 20px;
+}
+
+
+.footer-content {
+    max-width: 700px;
+
+    margin: auto;
+}
+
+
+footer h2 {
+    font-size: 28px;
+
+    margin-bottom: 15px;
+}
+
+
+footer p {
+    color: #c7d9cc;
+
+    margin: 6px;
+}
+
+
+.buton-footer {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    color: white;
+
+    border: 1px solid #9ab9a3;
+
+    padding: 9px 20px;
+
+    border-radius: 25px;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+
+.buton-footer:hover {
+    background-color: white;
+
+    color: #294b35;
+}
+
+
+@media (max-width: 850px) {
+
+    header h1 {
+        font-size: 38px;
+    }
+
+
+    .nav-container {
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+
+    .meniu {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+
+    .tara {
+        width: 94%;
+
+        padding: 30px 25px;
+    }
+
+
+    .continut-tara {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+
+    .coloana-informatii {
+        grid-template-columns: 1fr;
+    }
+
+
+    .tara-header {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+
+    .informatie {
+        flex-wrap: wrap;
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    header {
+        min-height: 430px;
+
+        padding: 40px 15px;
+    }
+
+
+    header h1 {
+        font-size: 30px;
+    }
+
+
+    .intro {
+        font-size: 16px;
+    }
+
+
+    .tara h2 {
+        font-size: 28px;
+    }
+
+
+    .comparatie {
+        width: 94%;
+
+        padding: 25px 15px;
+    }
+
+
+    .steag td {
+        width: 35px;
+
+        height: 25px;
+    }
+
+}
