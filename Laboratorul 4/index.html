@@ -1,0 +1,230 @@
+
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Laboratorul 4 - Liste și metodele Array</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        section {
+            margin-top: 30px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        input {
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 15px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #333;
+            color: white;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        .rezultat {
+            margin-top: 15px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+        }
+
+        .elev {
+            padding: 15px;
+            margin: 10px 0;
+            background-color: #f2f2f2;
+            border-radius: 8px;
+        }
+
+        .elev h3 {
+            margin-top: 0;
+        }
+
+        .mesaj {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <section>
+
+        <h2>Exercițiul 1 – Creează prima listă</h2>
+
+        <button onclick="exercitiul1()">
+            Execută exercițiul 1
+        </button>
+
+    </section>
+
+
+    <section>
+
+        <h2>Exercițiul 2 – Adaugă și elimină</h2>
+
+        <button onclick="exercitiul2()">
+            Execută exercițiul 2
+        </button>
+
+
+    </section>
+
+
+    <section>
+
+        <h2>Exercițiul 3 și 4 – Lista de cumpărături</h2>
+
+        <input
+            type="text"
+            id="produsInput"
+            placeholder="Introdu produsul"
+        >
+
+        <br>
+
+        <button onclick="adaugaLaSfarsit()">
+            Adaugă la sfârșit
+        </button>
+
+        <button onclick="adaugaLaInceput()">
+            Adaugă la început
+        </button>
+
+        <button onclick="stergePrimul()">
+            Șterge primul
+        </button>
+
+        <button onclick="stergeUltimul()">
+            Șterge ultimul
+        </button>
+
+        <h3>Lista de cumpărături:</h3>
+
+        <div id="listaProduse" class="rezultat"></div>
+
+    </section>
+
+
+    <section>
+
+        <h2>Exercițiul 5 – Catalog electronic al elevilor</h2>
+
+        <h3 id="numarElevi">
+            Număr de elevi: 0
+        </h3>
+
+
+        <h3>Adaugă elev</h3>
+
+        <input
+            type="text"
+            id="nume"
+            placeholder="Nume și prenume"
+        >
+
+        <input
+            type="number"
+            id="varsta"
+            placeholder="Vârsta"
+        >
+
+        <input
+            type="number"
+            id="nota"
+            placeholder="Nota"
+            min="1"
+            max="10"
+        >
+
+        <br>
+
+        <button onclick="adaugaElev()">
+            Adaugă elev
+        </button>
+
+
+        <h3>Șterge elev</h3>
+
+        <input
+            type="text"
+            id="numeStergere"
+            placeholder="Numele elevului"
+        >
+
+        <button onclick="stergeElev()">
+            Șterge elev
+        </button>
+
+
+        <h3>Caută elev</h3>
+
+        <input
+            type="text"
+            id="numeCautare"
+            placeholder="Numele elevului"
+        >
+
+        <button onclick="cautaElev()">
+            Caută
+        </button>
+
+        <div id="rezultatCautare" class="rezultat"></div>
+
+
+        <h3>Catalogul elevilor</h3>
+
+        <div id="catalog"></div>
+
+    </section>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
+
