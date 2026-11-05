@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogul studenților</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">ST</div>
+            <div>
+                <h1>Catalogul studenților</h1>
+                <p>Gestionarea studenților</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="student-counter">
+            <p>Total studenți în catalog</p>
+            <h2 id="studentCount">0</h2>
+        </section>
+
+        <section class="panel">
+            <h2>Adaugă un student</h2>
+
+            <form id="studentForm">
+                <div class="form-grid">
+
+                    <label>
+                        Nume și prenume
+                        <input type="text" id="name" placeholder="Introdu numele" required>
+                    </label>
+
+                    <label>
+                        Grupa
+                        <input type="text" id="group" placeholder="Ex: SI-231" required>
+                    </label>
+
+                    <label>
+                        Vârsta
+                        <input type="number" id="age" min="14" max="100" placeholder="Vârsta" required>
+                    </label>
+
+                    <label>
+                        Specialitatea
+                        <input type="text" id="specialty" placeholder="Specialitatea" required>
+                    </label>
+
+                    <label class="full-width">
+                        Fotografia studentului
+
+                        <input
+                            type="file"
+                            id="avatar"
+                            accept="image/*"
+                            hidden
+                        >
+
+                        <div class="image-upload" id="imageUpload">
+                            <img id="imagePreview" alt="Previzualizare fotografie">
+                            <div id="uploadText">
+                                <span class="upload-icon">+</span>
+                                <strong>Alege fotografia</strong>
+                                <small>Apasă aici pentru a selecta o imagine</small>
+                            </div>
+                        </div>
+                    </label>
+
+                </div>
+
+                <div class="form-buttons">
+                    <button type="submit">Adaugă student</button>
+                    <button type="reset" class="reset-button">Resetează</button>
+                </div>
+
+                <p id="formMessage"></p>
+            </form>
+        </section>
+
+        <section class="panel">
+            <h2>Lista studenților</h2>
+            <div id="studentsList" class="students-list"></div>
+        </section>
+
+        <section class="panel">
+            <h2>Setări Flexbox</h2>
+
+            <div class="form-grid">
+
+                <label>
+                    Justify Content
+                    <select id="justifyContent">
+                        <option value="flex-start">Flex Start</option>
+                        <option value="center">Center</option>
+                        <option value="flex-end">Flex End</option>
+                        <option value="space-between">Space Between</option>
+                        <option value="space-around">Space Around</option>
+                    </select>
+                </label>
+
+                <label>
+                    Align Items
+                    <select id="alignItems">
+                        <option value="stretch">Stretch</option>
+                        <option value="center">Center</option>
+                        <option value="flex-start">Flex Start</option>
+                        <option value="flex-end">Flex End</option>
+                    </select>
+                </label>
+
+                <label>
+                    Flex Wrap
+                    <select id="flexWrap">
+                        <option value="wrap">Wrap</option>
+                        <option value="nowrap">No Wrap</option>
+                        <option value="wrap-reverse">Wrap Reverse</option>
+                    </select>
+                </label>
+
+                <label>
+                    Gap: <span id="gapValue">20</span> px
+                    <input type="range" id="gap" min="0" max="50" value="20">
+                </label>
+
+            </div>
+
+            <button type="button" id="resetFlex" class="reset-button">
+                Resetează setările
+            </button>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Catalogul studenților</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
